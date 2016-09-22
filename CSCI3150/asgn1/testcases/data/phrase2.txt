@@ -1,0 +1,3 @@
+pattern1
+hello_world
+_

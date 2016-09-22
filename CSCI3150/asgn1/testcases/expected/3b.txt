@@ -1,0 +1,13 @@
+pattern1
+./testcases/data/data3.txt:1:0
+./testcases/data/data3.txt:1:36
+hello_world
+./testcases/data/data3.txt:2:0
+./testcases/data/data3.txt:3:0
+./testcases/data/data3.txt:3:12
+./testcases/data/data3.txt:3:24
+_
+./testcases/data/data3.txt:2:5
+./testcases/data/data3.txt:3:5
+./testcases/data/data3.txt:3:17
+./testcases/data/data3.txt:3:29

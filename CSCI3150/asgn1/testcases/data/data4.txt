@@ -1,0 +1,6 @@
+[pattern1] hello_ is not hello_world [pattern1]
+pattern should not span multiple lines so "hello_
+world" does not count, but "hello_world" counts
+
+pattern1 appears after a blank line, check line number for pattern1
+

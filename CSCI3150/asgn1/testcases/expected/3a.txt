@@ -1,0 +1,5 @@
+hello
+./testcases/data/data3.txt:2:0
+./testcases/data/data3.txt:3:0
+./testcases/data/data3.txt:3:12
+./testcases/data/data3.txt:3:24

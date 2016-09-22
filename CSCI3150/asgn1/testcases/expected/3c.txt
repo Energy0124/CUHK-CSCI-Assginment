@@ -1,0 +1,24 @@
+pattern1
+./testcases/data/data3.txt:1:0
+./testcases/data/data3.txt:1:36
+./testcases/data/data4.txt:1:1
+./testcases/data/data4.txt:1:38
+./testcases/data/data4.txt:5:0
+./testcases/data/data4.txt:5:59
+hello_world
+./testcases/data/data3.txt:2:0
+./testcases/data/data3.txt:3:0
+./testcases/data/data3.txt:3:12
+./testcases/data/data3.txt:3:24
+./testcases/data/data4.txt:1:25
+./testcases/data/data4.txt:3:28
+ world
+_
+./testcases/data/data3.txt:2:5
+./testcases/data/data3.txt:3:5
+./testcases/data/data3.txt:3:17
+./testcases/data/data3.txt:3:29
+./testcases/data/data4.txt:1:16
+./testcases/data/data4.txt:1:30
+./testcases/data/data4.txt:2:48
+./testcases/data/data4.txt:3:33
