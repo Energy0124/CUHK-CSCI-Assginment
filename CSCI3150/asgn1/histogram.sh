@@ -17,7 +17,7 @@ function histogram {
         if [ -f ${file} ]; then
             data=$(cat ${file})
             IFS=${new_ifs}
-            for str in ${data};do
+            for str in ${data[@]};do
                 ((count[${#str}]++))
             done
             IFS=${default_ifs}
