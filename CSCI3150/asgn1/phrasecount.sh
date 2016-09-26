@@ -5,10 +5,10 @@ myfiles=${ASGN1_FILES}
 
 
 default_ifs=" "$'\n'$'\t'
+
 files=()
 words=()
 word_count=()
-
 function phrasecount {
 
     IFS=${default_ifs}

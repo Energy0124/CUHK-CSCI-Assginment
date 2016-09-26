@@ -31,4 +31,4 @@ function histogram {
 
 }
 
-histogram
+histogram $@
