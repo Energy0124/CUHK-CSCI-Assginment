@@ -9,33 +9,50 @@ default_ifs=" "$'\n'$'\t'
 files=()
 words=()
 word_count=()
+error="no"
 function phrasecount {
 
     IFS=${default_ifs}
     c=0
     for file in ${myfiles[@]};do
-        files[${c}]=${file}
-        ((c++))
+        if [ -f ${file} ]; then
+            files[${c}]=${file}
+            ((c++))
+        else
+            echo "File-error: ${file}!"
+            error="yes"
+        fi
     done
-    file0=${files[0]}
-    file1=${files[1]}
-    file2=${files[2]}
-    data=$(cat ${file0})
+
+    if [ ${error} = "yes" ]
+    then
+        return
+    fi
+#    file0=${files[0]}
+#    file1=${files[1]}
+#    file2=${files[2]}
+    data=$(cat ${files[0]})
     count=0
     IFS=$'\n'
     for line in ${data[@]};do
         IFS=${default_ifs}
         word_count[${count}]=0
-        words=$(cat "${file1}"|grep -oh "${line}")
-        for word in ${words[@]};do
-            ((word_count[${count}]++))
+
+        for (( i=1;i<${#files[@]};i++ ));do
+            file=${files[${i}]}
+#            words=$(cat "${file}"|grep -oh "${line}")
+#            for word in ${words[@]};do
+#                ((word_count[${count}]++))
+#            done
+#            echo "$file"
+#            echo "$line"
+            if [[ ! -z "${file}" ]];then
+                words=$(cat "${file}"|grep -oh "${line}")
+                for word in ${words[@]};do
+                    ((word_count[${count}]++))
+                done
+            fi
         done
-        if [[ ! -z "${file2}" ]];then
-            words=$(cat "${file2}"|grep -oh "${line}")
-            for word in ${words[@]};do
-                ((word_count[${count}]++))
-            done
-        fi
         ((count++))
         IFS=$'\n'
     done
